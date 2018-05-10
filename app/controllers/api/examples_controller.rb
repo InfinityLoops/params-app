@@ -9,4 +9,21 @@ class Api::ExamplesController < ApplicationController
     
     render 'string.json.jbuilder'
   end
+
+  def url_segment
+    @message = params["this_is_a_variable"]
+    render 'url_segment.json.jbuilder'
+  end
+
+  def body_example
+    @message = params["message"]
+    render 'body_example.json.jbuilder'
+  end
 end
+
+
+
+
+
+
+
